@@ -10,7 +10,7 @@ A free, browser-based tool that sizes a solar power system and estimates its cos
 
 
 
-\---
+---
 
 
 
@@ -46,7 +46,7 @@ The calculator returns:
 
 
 
-\---
+---
 
 
 
@@ -62,11 +62,25 @@ This tool gives a defensible first estimate in under a minute, without requiring
 
 
 
-\---
+---
 
 
 
-\## How the Math Works
+## Screenshots
+
+### Location and system inputs
+![Location and system inputs](figures/input.png)
+
+### Appliance list — fully editable
+![Appliance list](figures/appliances.png)
+
+### Recommended system size
+![Recommended system size](figures/results.png)
+
+### Header and disclaimer
+![Header](figures/header.png)
+
+## How the Math Works
 
 
 
@@ -142,7 +156,7 @@ These are rough global averages. Actual prices vary significantly by region.
 
 
 
-\---
+---
 
 
 
@@ -162,7 +176,7 @@ These are rough global averages. Actual prices vary significantly by region.
 
 
 
-\---
+---
 
 
 
@@ -178,7 +192,7 @@ These are rough global averages. Actual prices vary significantly by region.
 
 
 
-\---
+---
 
 
 
@@ -204,7 +218,7 @@ Plain HTML, CSS, and JavaScript. No framework, no build step, no dependencies.
 
 
 
-\---
+---
 
 
 
@@ -230,7 +244,7 @@ Or view it live at: \*\*https://alusine-bah.github.io/solar-budget-calculator/\*
 
 
 
-\---
+---
 
 
 
@@ -250,7 +264,7 @@ Or view it live at: \*\*https://alusine-bah.github.io/solar-budget-calculator/\*
 
 
 
-\---
+---
 
 
 
@@ -268,7 +282,7 @@ Islamic University of Technology (IUT), OIC
 
 
 
-\---
+---
 
 
 
