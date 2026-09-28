@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solar Budget Calculator</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <h1>☀️ Solar Budget Calculator</h1>
+    <p class="tagline">
+      Size a solar power system and estimate its cost — from anywhere in the world.
+    </p>
+  </header>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <strong>Note:</strong> Peak sun hours are regional averages. For precise
+    sizing, verify with the
+    <a href="https://globalsolaratlas.info" target="_blank">Global Solar Atlas</a>.
+    Cost figures are rough planning estimates, not quotes. Consult a local
+    installer before purchasing.
+  </div>
+
+  <main class="container">
+
+    <!-- SECTION 1: LOCATION & SYSTEM -->
+    <section class="card">
+      <h2>1. Location & System</h2>
+
+      <div class="grid-2">
+        <label>
+          Country
+          <select id="country"></select>
+        </label>
+
+        <label>
+          Peak Sun Hours (kWh/m²/day)
+          <input type="number" id="psh" min="2" max="8" step="0.1" value="5.0"/>
+        </label>
+
+        <label>
+          Days of Autonomy (backup days)
+          <input type="number" id="days" min="1" max="5" step="1" value="2"/>
+        </label>
+
+        <label>
+          System Voltage
+          <select id="voltage">
+            <option value="12">12 V</option>
+            <option value="24" selected>24 V</option>
+            <option value="48">48 V</option>
+          </select>
+        </label>
+
+        <label>
+          Currency
+          <select id="currency"></select>
+        </label>
+      </div>
+    </section>
+
+    <!-- SECTION 2: APPLIANCES -->
+    <section class="card">
+      <h2>2. Your Appliances</h2>
+
+      <table class="appliance-table">
+        <thead>
+          <tr>
+            <th>Appliance</th>
+            <th>Power (W)</th>
+            <th>Qty</th>
+            <th>Hours/day</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="appliance-rows"></tbody>
+      </table>
+
+      <button type="button" id="add-appliance" class="btn btn-add">
+        + Add Appliance
+      </button>
+    </section>
+
+    <!-- SECTION 3: SIZING RESULTS -->
+    <section class="card">
+      <h2>3. Recommended System Size</h2>
+
+      <div class="results-grid">
+        <div class="result">
+          <div class="result-label">Daily Energy Use</div>
+          <div class="result-value" id="out-daily">—</div>
+        </div>
+
+        <div class="result">
+          <div class="result-label">Solar Array Size</div>
+          <div class="result-value" id="out-array">—</div>
+        </div>
+
+        <div class="result">
+          <div class="result-label">Battery Bank</div>
+          <div class="result-value" id="out-battery">—</div>
+        </div>
+
+        <div class="result">
+          <div class="result-label">Inverter Size</div>
+          <div class="result-value" id="out-inverter">—</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: COST BREAKDOWN -->
+    <section class="card">
+      <h2>4. Estimated Cost</h2>
+
+      <table class="cost-table">
+        <tbody>
+          <tr><td>Solar panels</td><td id="cost-panel">—</td></tr>
+          <tr><td>Battery bank</td><td id="cost-battery">—</td></tr>
+          <tr><td>Inverter</td><td id="cost-inverter">—</td></tr>
+          <tr><td>Installation & wiring (20%)</td><td id="cost-install">—</td></tr>
+          <tr class="cost-total-row">
+            <td><strong>Total (USD)</strong></td>
+            <td><strong id="cost-total">—</strong></td>
+          </tr>
+          <tr class="cost-local-row">
+            <td><strong>Total in <span id="local-currency-label">USD</span></strong></td>
+            <td><strong id="cost-local">—</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Built by <a href="https://alusine-bah.github.io">Alusine Bah</a> · 2026</p>
+    <p class="footer-small">For planning purposes only — not a professional quote.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

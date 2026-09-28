@@ -1,0 +1,271 @@
+/* ── Reset & Base ───────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f7f9fc;
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  color: #1A3C6E;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Header ─────────────────────────────── */
+.site-header {
+  background: linear-gradient(135deg, #1A3C6E 0%, #2E6BAC 100%);
+  color: #fff;
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.site-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.05rem;
+  opacity: 0.92;
+}
+
+/* ── Disclaimer ─────────────────────────── */
+.disclaimer {
+  max-width: 900px;
+  margin: 24px auto 0;
+  padding: 14px 20px;
+  background: #fff8e1;
+  border-left: 4px solid #f0ad4e;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  color: #5c4813;
+}
+
+/* ── Container ──────────────────────────── */
+.container {
+  max-width: 900px;
+  margin: 24px auto 60px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ── Cards ──────────────────────────────── */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 28px;
+  box-shadow: 0 4px 16px rgba(26, 60, 110, 0.08);
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  color: #1A3C6E;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e8f4;
+}
+
+/* ── Form grid ──────────────────────────── */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #4a5568;
+  gap: 6px;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  padding: 10px 12px;
+  border: 1.5px solid #d0dff0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2E6BAC;
+}
+
+/* ── Appliance table ────────────────────── */
+.appliance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.appliance-table th {
+  text-align: left;
+  font-size: 0.82rem;
+  color: #4a5568;
+  padding: 8px 6px;
+  border-bottom: 2px solid #e0e8f4;
+}
+
+.appliance-table td {
+  padding: 6px 6px;
+}
+
+.appliance-table input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+}
+
+.appliance-table th:last-child,
+.appliance-table td:last-child {
+  width: 40px;
+}
+
+.btn-remove {
+  background: #fde8e8;
+  color: #c53030;
+  border: none;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-remove:hover {
+  background: #fbc5c5;
+}
+
+/* ── Buttons ────────────────────────────── */
+.btn-add {
+  background: #1A3C6E;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-add:hover {
+  background: #2E6BAC;
+}
+
+/* ── Results grid ───────────────────────── */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.result {
+  background: #f0f5ff;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.result-label {
+  font-size: 0.8rem;
+  color: #4a5568;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1A3C6E;
+}
+
+/* ── Cost table ─────────────────────────── */
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cost-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #eef2f8;
+  font-size: 0.95rem;
+}
+
+.cost-table td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: #1A3C6E;
+}
+
+.cost-total-row td {
+  border-top: 2px solid #1A3C6E;
+  border-bottom: none;
+  padding-top: 16px;
+  font-size: 1.05rem;
+}
+
+.cost-local-row td {
+  border-bottom: none;
+  padding-top: 6px;
+  color: #2E6BAC;
+}
+
+/* ── Footer ─────────────────────────────── */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #1A3C6E;
+  color: #c8d8ee;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #fff;
+}
+
+.footer-small {
+  opacity: 0.7;
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+/* ── Mobile ─────────────────────────────── */
+@media (max-width: 600px) {
+  .site-header {
+    padding: 36px 20px;
+  }
+  .site-header h1 {
+    font-size: 1.6rem;
+  }
+  .card {
+    padding: 20px;
+  }
+  .appliance-table th:nth-child(2),
+  .appliance-table td:nth-child(2) {
+    /* keep on mobile, but smaller */
+  }
+}
